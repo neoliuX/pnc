@@ -72,13 +72,10 @@ npm run build -- --env.path='client/points-exchange' --env.config='HASH'
 ### Commit规范
 
 ```
-feat：新功能（feature）
+feat：新增
 fix：修补bug
-docs：文档（documentation）
-style： 格式（不影响代码运行的变动）
-refactor：重构（即不是新增功能，也不是修改bug的代码变动）
-test：增加测试
-chore：构建过程或辅助工具的变动
+style： 样式
+test：测试
 ```
 
 ### 发布资源规范
