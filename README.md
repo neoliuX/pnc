@@ -1,6 +1,6 @@
 ## 所需技术栈
 
-typescript , ejs , scss , ES6 , vue
+typescript , ejs , scss , ES6 , vue , Axios
 
 ## 安装项目依赖
 
