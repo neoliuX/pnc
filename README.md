@@ -149,7 +149,7 @@ npm run build -- --env.path=你的项目路径
 
 ## 开发细节
 #### 引入公共的js
-如果需要引入公共的js，以jquery为例
+如果需要引入公共的js，以vue为例
 1. 在html底部增加
 
 ```
