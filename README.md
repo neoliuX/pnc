@@ -73,7 +73,7 @@ npm run build -- --env.path='client/points-exchange' --env.config='HASH'
 
 ```
 feat：新增
-fix：修补bug
+fix：修补
 style： 样式
 test：测试
 ```
@@ -102,17 +102,16 @@ test：测试
 3. git commit -m 'xxx'
 4. git push
 // 切换到master分支
-5. git checkout master
-6. git pull
-7. 合并到master
-   有权限
-      // merge当前分支到master
-      7. git merge feature
-      8. git push
-      9. 提交tag
-   无权限: 发布上线（合并）申请（选择指定人）
+5. 合并代码到master
+   a、有权限
+      1)、git checkout master
+      2)、git pull
+      3)、git merge feature
+      4)、git push
+      5)、提交tag
 
-
+   b、无权限: 发布上线（合并）申请（选择指定人）
+   
 ```
 ### 删除分支
 ```
