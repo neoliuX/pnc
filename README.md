@@ -78,10 +78,25 @@ style： 样式
 test：测试
 ```
 
-### 发布资源规范
+### 提交测试
 ```
 //打包资源
-1. git run build xxxxxx  
+1. npm run build xxxxxx  
+// 发布资源到当前分支
+2. git add .
+3. git commit -m 'xxx'
+4. git push
+// 切换到developr分支
+5. git checkout evelop
+6. git pull
+// merge当前分支到master
+7. git merge feature
+8. git push (后端支持制动发布到测试机)
+```
+### 发布上线
+```
+//打包资源
+1. npm run build xxxxxx  
 // 发布资源到当前分支
 2. git add .
 3. git commit -m 'xxx'
@@ -89,9 +104,15 @@ test：测试
 // 切换到master分支
 5. git checkout master
 6. git pull
-// merge当前分支到master
-7. git merge feature
-8. git push
+7. 合并到master
+   有权限
+      // merge当前分支到master
+      7. git merge feature
+      8. git push
+      9. 提交tag
+   无权限: 发布上线（合并）申请（选择指定人）
+
+
 ```
 ### 删除分支
 ```
@@ -103,7 +124,7 @@ git push --delete origin :br  (origin 后面有空格)
 ## 开发项目
 ```
 npm run dev -- --env.path=你的项目路径
-例如：npm start -- --env.path=web/index
+例如：npm run dev -- --env.path=web/index
 浏览器打开：localhost:3000/index.html
 ```
 
@@ -111,8 +132,7 @@ npm run dev -- --env.path=你的项目路径
 
 ```
 你可以启动两个或以上的项目，中间用逗号隔开，但是前提在同一个大项目下面
-例如：npm start -- --env.path=web/index,index2
-这样就会同时启动 web/index,web/live-detail和game/live-index
+例如：npm run dev -- --env.path=web/index,index2
 ```
 
 ## 打包项目
@@ -125,7 +145,7 @@ npm run build -- --env.path=你的项目路径
 当然，你也可以同时打包多个项目（同一个大项目下面）
 
 ```
-例如：npm run build -- --env.path=game/index,live-detail,live-index
+例如：npm run build -- --env.path=web/index,index2
 ```
 
 ## 开发细节
@@ -134,13 +154,9 @@ npm run build -- --env.path=你的项目路径
 1. 在html底部增加
 
 ```
- <script type="text/javascript" src="/public/js/jquery-1.12.4.min.js"></script>
+ <script type="text/javascript" src="/public/js/vue2.6.11.js"></script>
 ```
-2. 在ts引入
-```
-import * as $ from 'jquery'
-```
-3. 在ts里引入scss
+2. 在ts里引入scss
 ```
 import './index.scss'
 ```
