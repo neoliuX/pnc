@@ -107,7 +107,7 @@ git push --delete origin :br  (origin 后面有空格)
 ```
 npm run dev -- --env.path=你的项目路径
 例如：npm start -- --env.path=web/index
-浏览器打开：localhost:3000/web/index.html
+浏览器打开：localhost:3000/index.html
 ```
 
 多个项目同时启动
