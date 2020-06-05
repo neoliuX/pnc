@@ -138,7 +138,7 @@ npm run dev -- --env.path=你的项目路径
 
 ```
 npm run build -- --env.path=你的项目路径
-例如：npm run build -- --env.path=game/index
+例如：npm run build -- --env.path=web/index
 ```
 
 当然，你也可以同时打包多个项目（同一个大项目下面）

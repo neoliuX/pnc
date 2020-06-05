@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const baseConfigFn = require('./webpack.base.js')
 
-const port = 8080
+const port = 3000
 
 module.exports = function (env) {
   const baseConfig = baseConfigFn(env)
@@ -18,7 +18,7 @@ module.exports = function (env) {
     // 服务器压缩是否开启
     compress:true,
     // 配置服务器端口
-    port: 99999
+    port: 3000
   }
   return baseConfig
 }
