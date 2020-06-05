@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "types": [
+      "node"
+    ],
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "target": "es5",
+    "jsx": "react",
+    // 这可以对 `this` 上的数据属性进行更严格的推断
+    "strict": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ],
+    "pretty": true,
+    "typeRoots": [
+      "./types",
+      "./node_modules/vue/types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+      "./src/**/*"
+  ]
+}
