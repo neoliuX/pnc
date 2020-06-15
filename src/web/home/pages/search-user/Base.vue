@@ -1,14 +1,15 @@
 <template>
-  <div id="content" class="warp">     
-     <router-view></router-view>
+  <div class="search-phone">
+      <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts" scoped>
 import { Vue, Component, Prop } from 'vue-property-decorator'
+import { State, Getter, Mutation, Action } from 'vuex-class'
 
 @Component
-export default class BaseCom extends Vue {
+export default class SearchBase extends Vue {
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="v-input" :style="{width: getWidth}">
+  <div class="v-input" :style="{width: getWidth, height: getHeight}">
       <slot name="icon"></slot>
       <slot></slot>
       <input v-model="value" :type="getType" :placeholder="placeholder">
@@ -15,10 +15,14 @@ export default class VInput extends Vue {
   @Prop() type?: string
   @Prop() placeholder?: string
   @Prop() width?: string
+  @Prop() height?: string
   @Prop() defaultTxt?: string
 
   get getWidth () {
     return this.width || '146px'
+  }
+  get getHeight () {
+    return this.height || '25px'
   }
 
   get getType () {
@@ -50,6 +54,7 @@ export default class VInput extends Vue {
   color:#333;
   box-sizing: border-box;
   font-size: 14px;
+  background: #fff;
   input{
     background: none;
     display: block;

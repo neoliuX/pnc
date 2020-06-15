@@ -26,6 +26,16 @@
           <v-button class="btn" width="105px" height="35px" :type="1" @click="close">是</v-button>
       </template>
     </alert-com>
+
+
+    <v-button class="btn" :type="1" @click="isModals = true">默认背景</v-button>
+    <Modals v-model="isModals">
+      <div style="padding: 30px;line-height:50px;text-align:center;">
+        <p>背景弹窗</p>
+        <v-button class="btn" :type="1" @click="isModals = false">关闭</v-button>
+      </div>
+    </Modals>
+
   </div>
 </template>
 
@@ -34,17 +44,20 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import VButton from '@web/form/VButton.vue'
 import AlertCom from '../Alert.vue'
+import Modals from '../Modals.vue'
 
 @Component({
   components: {
     AlertCom,
-    VButton
+    VButton,
+    Modals
   }
 })
 export default class DialogDemo extends Vue {
   isAlertShow: boolean = false
   isAlertDefault: boolean = false
   isAlertBtn: boolean = false
+  isModals: boolean = false
 
   close () {
     this.isAlertDefault = false

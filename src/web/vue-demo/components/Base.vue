@@ -1,5 +1,5 @@
 <template>
-  <div class="warp">
+  <div id="content" class="warp">     
     <ul class="leftbar">
       <li 
         v-for="info in list"

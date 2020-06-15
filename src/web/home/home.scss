@@ -1,0 +1,31 @@
+.btn-box{
+  text-align: center;
+}
+.error{
+  color:#D5001C;
+  font-size: 14px;
+}
+.table-box{
+  width:100%;
+  table{
+    width:100%;
+    font-size: 14px;
+    color:#333;
+    text-align: center;
+  }
+  thead{
+    background: #DCDCDC;
+  }
+  th{
+    vertical-align: middle;
+    height: 32px;
+  }
+  td{
+    vertical-align: middle;
+    height: 38px;
+    border-bottom: 1px solid #EBEBEB;
+  }
+}
+.pagination-box{
+  margin-top:55px;
+}

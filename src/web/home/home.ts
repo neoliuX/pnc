@@ -1,18 +1,19 @@
 import '@src/assets/scss/base.scss'
-import './vue-demo.scss'
+import './home.scss'
 import Vue from 'vue'
+import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 
 import { RouteConfig } from 'vue-router/types'
 
 import BaseCom from './components/Base.vue'
-import Form from '@web/form/demo/FormDemo.vue'
-import Dialog from '@web/dialog/demo/DialogDemo.vue'
-import Head from '@web/head/demo/HeadDemo.vue'
-import Foot from '@web/foot/demo/FootDemo.vue'
+import SearchPhoneBase from './pages/search-user/Base.vue'
+import SearchPhone from './pages/search-user/SearchPhone.vue'
+import SearchResult from './pages/search-user/SearchResult.vue'
 
 import vueAjax from '@common/vue-plugin/ajax/Ajax'
 import Validator from '@common/vue-plugin/validator/Validator'
+import store from './store/index'
 
 Vue.use(VueRouter)
 Vue.use(vueAjax)
@@ -30,11 +31,21 @@ Promise.resolve().then(res => {
       path: '/',
       component: BaseCom,
       children: [
-        { path: '/form', component: Form },
-        { path: '/dialog', component: Dialog },
-        { path: '/head', component: Head },
-        { path: '/foot', component: Foot },
-        { path: '/', component: Form }
+        {
+          path: '/search',
+          component: SearchPhoneBase,
+          children: [
+            {
+              path: '/search/phone', component: SearchPhone
+            },
+            {
+              path: '/search/result', component: SearchResult
+            },
+            {
+              path: '/search/', component: SearchPhone
+            }
+          ]
+        }
       ]
     }
   ]
@@ -48,6 +59,7 @@ Promise.resolve().then(res => {
   new Vue({
     el: '#app',
     router,
+    store,
     render: h => h(Bar)
   })
 })

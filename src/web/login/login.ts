@@ -1,3 +1,4 @@
+import '@src/assets/scss/base.scss'
 import './login.scss'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
