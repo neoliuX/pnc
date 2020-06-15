@@ -46,7 +46,6 @@ const vueAjax = {
           get: warpASpinner(this.$ajax.get, this),
           post: warpASpinner(this.$ajax.post, this),
           postUrlSearch: warpASpinner(this.$ajax.postUrlSearch, this),
-          downloadXls: warpASpinner(this.$ajax.downloadXls, this),
           jsonp: warpASpinner(this.$ajax.jsonp, this),
           jsonpPro: warpASpinner(this.$ajax.jsonpPro, this)
         }

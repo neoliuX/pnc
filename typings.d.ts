@@ -15,7 +15,7 @@ declare var staticRoot: string
 declare var cacheHost: string
 declare var yoozoo: any
 declare var HOST: {
-  PRE: string
+  PAI: string
 }
 declare const CURRENT_DATA: string
 declare module 'md5'

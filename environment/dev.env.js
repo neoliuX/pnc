@@ -7,8 +7,7 @@ module.exports = function (config) {
     NODE_ENV: '"development"',
     DEBUG_MODE: false,
     HOST: {
-      PRE: '""',
-      MINICLIENT: '"//micro-api.gtarcade.com/"',
+      API: '"//l2l-test.boldseas.com"',
     },
     cacheHost: '"//micro.gtarcade.com/"',
     staticPath: `"../"`,

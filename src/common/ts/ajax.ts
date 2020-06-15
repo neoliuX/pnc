@@ -10,7 +10,6 @@ const ajax = {
   ...Axios,
   get,
   post,
-  downloadXls,
   postUrlSearch,
   jsonp,
   jsonpPro
@@ -120,29 +119,6 @@ function sourceWrapper (source: CancelTokenSource, method: string, args: any[]) 
     let [url, data, config = {}] = args
     return ajax[method](url, data, setCancelToken(source, config))
   }
-}
-
-// 下载xls的
-function downloadXls (url: string, filename: string, options?: any) {
-  ajax.create({
-    ...getCommonConfig('XLS', url),
-    baseURL: '',
-    method: 'get',
-    ...options,
-    responseType: 'blob'
-  })
-    .get(url)
-    .then((res: any) => {
-      const blob = new Blob([res.data], { type: 'application/vnd.ms-excel' })
-      return window.URL.createObjectURL(blob)
-    })
-    .then(url => {
-      var a = document.createElement('a')
-      a.style.display = 'none'
-      a.href = url
-      a.download = filename + '.xls'
-      a.click()
-    })
 }
 
 interface Options {

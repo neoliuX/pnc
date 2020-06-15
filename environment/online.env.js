@@ -4,8 +4,7 @@ module.exports = function (config) {
     NODE_ENV: '"online"',
     DEBUG_MODE: false,
     HOST: {
-      PRE: '""',
-      MINICLIENT: '"//micro-api.gtarcade.com/"',
+      API: '""',
     },
     // cacheHost: '"//static.gtarcade.com/gtarcade/micro/"',
     // staticPath: `"//static.gtarcade.com/gtarcade/gamerepository/clientweb/${config.outFolder}/"`,

@@ -26,6 +26,7 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import VButton from '@web/form/VButton.vue'
 import Alert from '@web/dialog/Alert.vue'
+import { ReqApi } from '../lib/reqApi'
 
 @Component({
   components: {
@@ -38,7 +39,12 @@ export default class IndexCom extends Vue {
   password: string = ''
   isAlertShow: boolean = false
 
-  submit () {
+  async submit () {
+    let formData = new FormData()
+    formData.append('userName', this.user.toString())
+    formData.append('password', this.password.toString())
+    formData.append('tenantId', 'porsche')
+    const { data } = await this.$ajax.post(ReqApi['login'].url(), formData)
     this.isAlertShow = true
   }
   close () {
