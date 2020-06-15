@@ -1,0 +1,17 @@
+<template>
+  <div class="home">
+    home
+  </div>
+</template>
+
+<script lang="ts" scoped>
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component
+export default class IndexCom extends Vue {
+}
+</script>
+
+<style lang="scss" scoped>
+</style>
+

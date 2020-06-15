@@ -1,0 +1,14 @@
+<svg id="矢量智能对象" xmlns="http://www.w3.org/2000/svg" width="17.384" height="15" viewBox="0 0 17.384 15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d9d9d9;
+      }
+    </style>
+  </defs>
+  <g id="矢量智能对象-2" data-name="矢量智能对象" transform="translate(0 0)">
+    <path id="路径_19" data-name="路径 19" class="cls-1" d="M13.807,3.212V2.141H12.745V3.212H6.377V2.141H5.316V3.212H1.061V17.141h17V3.212ZM17,16.186H2.123V8.576H17ZM17,7.5H2.123V4.177H5.307V5.354H6.368V4.177h6.377V5.354h1.061V4.177H16.99V7.5Z" transform="translate(-1.061 -2.141)"/>
+    <path id="路径_20" data-name="路径 20" class="cls-1" d="M12.745,12.859h2.123V15H12.745ZM8.5,9.646h2.123v2.141H8.5Zm4.245,0h2.123v2.141H12.745Zm-8.5,3.212H6.368V15H4.245Zm4.255,0h2.123V15H8.5ZM4.245,9.646H6.368v2.141H4.245Z" transform="translate(-1.061 -2.141)"/>
+  </g>
+  <path id="Color_Overlay" data-name="Color Overlay" class="cls-1" d="M0,15V1.071H4.255V0H5.316V1.071h6.367V0h1.062V1.071H17V15Zm1.061-.955H15.939V6.434H1.061Zm0-8.681H15.929V2.036H12.746V3.213H11.684V2.036H5.306V3.213H4.245V2.036H1.061Zm10.623,7.5V10.717h2.123v2.142Zm-4.245,0V10.717H9.562v2.142Zm-4.254,0V10.717H5.306v2.142Zm8.5-3.212V7.5h2.123V9.647Zm-4.245,0V7.5H9.562V9.647Zm-4.254,0V7.5H5.306V9.647Z" transform="translate(0.384)"/>
+</svg>

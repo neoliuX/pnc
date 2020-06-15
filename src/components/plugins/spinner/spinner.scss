@@ -1,0 +1,68 @@
+.v-spinner-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:url('../../spinner/images/animated.png') no-repeat center center rgba(0, 0, 0, .8);
+  display: none;
+  z-index: 9999999;
+  opacity: 0;
+  transition: opacity 200ms;
+  user-select: none;
+  &.v-spinner-show {
+    opacity: 1;
+  }
+/*  .v-spinner {
+    width: 88px;
+    height: 24px;
+    text-align: center;
+    margin-top: -12px;
+    margin-left: -44px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  
+  
+  .v-spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, .8);
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.7s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.7s infinite ease-in-out both;
+  }
+  
+  .v-spinner .bounce {
+    -webkit-animation-delay: -0.48s;
+    animation-delay: -0.48s;
+  }
+  
+  .v-spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .v-spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  } */
+}

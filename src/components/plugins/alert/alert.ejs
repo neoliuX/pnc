@@ -1,0 +1,24 @@
+<div class="tip-box <%= className %>">
+    <i class="iconfont icon-close">&#xe666;</i>
+
+  <% if (className.indexOf('success') > -1 ) {%>
+  <i class="icon-tip iconfont-right"></i>
+  <% } else if (className.indexOf('info') > -1 ) { %>
+  <i class="icon-tip iconfont-info"></i>
+  <% } else if (className.indexOf('warning') > -1 ) { %>
+  <i class="icon-tip iconfont-warning"></i>
+  <% } else if (className.indexOf('error') > -1 ) { %>
+  <i class="icon-tip iconfont-error"></i>
+  <% } %>
+  <p class="alert-text"><%- html %></p>
+  <% if (description) {%>
+    <p class="alert-desc"><%- description %></p>
+  <% } %>
+</div>
+
+<% if (isConfirm) {%>
+  <div class="confirm-bottom">
+    <span class="confirm-button cancel">Cancel</span>
+    <span class="confirm-button ok">Ok</span>
+  </div>
+<% } %>

@@ -1,37 +1,43 @@
 {
   "compilerOptions": {
-    "types": [
-      "node"
-    ],
     "outDir": "./dist/",
-    "noImplicitAny": true,
-    "target": "es5",
-    "jsx": "react",
-    // 这可以对 `this` 上的数据属性进行更严格的推断
-    "strict": true,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "allowJs": true,
     "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
     "allowJs": true,
-    "isolatedModules": true,
-    "lib": [
-      "dom",
-      "es5",
-      "es2015.promise"
-    ],
-    "pretty": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,    
+    "isolatedModules": false,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "removeComments": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib" : ["es2015", "es2017", "dom"],
+    "baseUrl": "",
+    "jsx": "react",
     "typeRoots": [
-      "./types",
-      "./node_modules/vue/types"
-    ]
+      "node_modules/@types"
+    ],
+    "types" : [
+    ],
+    "paths": {
+      "jquery-ui": [
+        "node_modules/@types/jqueryui/index"
+      ],
+      "@src/*": [ "src/*" ],
+      "@common/*": [ "src/common/*" ],
+      "@public/*": [ "src/public/*" ]
+      // "@client-vue/*": [ "src/client/vue-components/*" ]
+    }
   },
-  "exclude": [
-    "node_modules"
-  ],
   "include": [
-      "./src/**/*"
+      "./src",
+      "./test",
+      "./types"
+  ],
+  "files": [
+    "typings.d.ts"
   ]
 }
