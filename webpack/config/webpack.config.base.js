@@ -56,8 +56,6 @@ module.exports = function ({
         '@src': path.resolve(process.cwd(), 'src/'),
         '@common': path.resolve(process.cwd(), 'src/common/'),
         '@public': path.resolve(process.cwd(), 'src/public/'),
-        '@web': path.resolve(process.cwd(), 'src/web/components/'),
-        '@h5': path.resolve(process.cwd(), 'src/h5/components/'),
         '@client-vue': path.resolve(process.cwd(), 'src/client/vue-components/')
       }
     },

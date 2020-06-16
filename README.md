@@ -33,7 +33,7 @@ cnpm install
 2. 每个页面在项目下（如：web），需要建立自己的文件夹 (如：index)，并建立ejs，scss，ts文件，与文件夹同名
 
 3. ```
-   npm run dev -- --env.path=web/index  or sudo npm run dev -- --env.path=web/index  --port='80'
+   npm start -- --env.path=web/index  or sudo npm start -- --env.path=web/index  --port='443' --https
    ```
 
 4. 把当前页面拆分为组件，放入当前项目的components里面，并去调用它们

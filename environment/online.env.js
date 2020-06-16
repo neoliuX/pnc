@@ -4,11 +4,8 @@ module.exports = function (config) {
     NODE_ENV: '"online"',
     DEBUG_MODE: false,
     HOST: {
-      API: '""',
+      API: '"//l2l-test.boldseas.com"',
     },
-    // cacheHost: '"//static.gtarcade.com/gtarcade/micro/"',
-    // staticPath: `"//static.gtarcade.com/gtarcade/gamerepository/clientweb/${config.outFolder}/"`,
-    // staticRoot: `"//static.gtarcade.com/gtarcade/gamerepository/clientweb/client/"`,
     API_KEY: '"XXXX-XXXXX-XXXX-XXXX"'
   }
 }

@@ -18,6 +18,16 @@ module.exports = function (env) {
     new DefinePlugin(envdev)
   ]
   webpackConfig.devServer = {
+    proxy: {
+        "/api/*": {
+            target: "http://l2l-test.boldseas.com",
+            changeOrigin: true,
+        },
+        "/services/porsche/api/*": {
+            target: "http://l2l-test.boldseas.com",
+            changeOrigin: true,
+        }
+    },
     port: 3000,
     host: 'localhost',
     historyApiFallback: true,
@@ -52,7 +62,7 @@ module.exports = function (env) {
       colors: {
         green: '\u001b[32m',
       }
-    },
+    }
   }
 
   return webpackConfig

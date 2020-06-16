@@ -1,0 +1,22 @@
+<svg id="组件_2_1" data-name="组件 2 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.026" height="17.026" viewBox="0 0 17.026 17.026">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="SVGID" class="cls-1" width="17.026" height="17.026"/>
+    </clipPath>
+  </defs>
+  <g id="组_4" data-name="组 4">
+    <g id="组_3" data-name="组 3" class="cls-2" transform="translate(0 0)">
+      <path id="路径_8" data-name="路径 8" class="cls-1" d="M631.531,220.024a7.589,7.589,0,0,1-2.428-.4,7.532,7.532,0,1,1,7.74-1.8.508.508,0,0,1-.719-.718,6.516,6.516,0,1,0-3.858,1.861,6.6,6.6,0,0,0,1.084-.219.507.507,0,1,1,.284.973,7.322,7.322,0,0,1-1.253.251,7,7,0,0,1-.851.051Zm0,0" transform="translate(-624 -205)"/>
+      <path id="路径_9" data-name="路径 9" class="cls-1" d="M1100.427,681.768a.506.506,0,0,1-.359-.148l-4.037-4.031a.508.508,0,0,1,.719-.718l4.037,4.031a.507.507,0,0,1-.36.866Zm0,0" transform="translate(-1083.905 -664.766)"/>
+    </g>
+  </g>
+</svg>
