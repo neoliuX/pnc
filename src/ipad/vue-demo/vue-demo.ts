@@ -10,6 +10,7 @@ import Form from '@src/ipad/components/form/demo/FormDemo.vue'
 import Dialog from '@src/ipad/components/dialog/demo/DialogDemo.vue'
 import Head from '@src/ipad/components/head/demo/HeadDemo.vue'
 import Foot from '@src/ipad/components/foot/demo/FootDemo.vue'
+import Table from '@src/ipad/components/table/demo/TableDemo.vue'
 
 import vueAjax from '@common/vue-plugin/ajax/Ajax'
 import Validator from '@common/vue-plugin/validator/Validator'
@@ -34,6 +35,7 @@ Promise.resolve().then(res => {
         { path: '/dialog', component: Dialog },
         { path: '/head', component: Head },
         { path: '/foot', component: Foot },
+        { path: '/table', component: Table },
         { path: '/', component: Form }
       ]
     }

@@ -2,14 +2,14 @@
     <div class="header">
       <div class="top">
         <span class="back" @click="goBack">
-          <img src="./images/arror.svg"> 返回
+          <img src="../../images/back.svg"> 返回
         </span>
         <span class="protocol">
           礼仪01
-          <img src="./images/exit.svg">
+          <img src="../../images/exit.svg">
         </span>
         <span class="mark" v-if="isHideMark ? false : true">
-          <img src="./images/warning.svg"> 词条注释
+          <img src="../../images/warning.svg"> 词条注释
         </span>
       </div>
       <div class="mid" v-if="isHideLogo ? false : true">

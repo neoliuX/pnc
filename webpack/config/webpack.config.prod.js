@@ -11,7 +11,7 @@ const ModifyFile = require('../plugin/modify-file-path')
 const SplitThemeToFile = require('../plugin/split-theme-to-file')
 const MultipleVersion = require('../plugin/multipleVersion')
 
-const PATH = '//s.waliwang.com/test/pnc/'
+const PATH = '/test/pnc/'
 
 module.exports = function (env) {
   const config = utils.getConfig(env)
@@ -38,34 +38,7 @@ module.exports = function (env) {
             return r
           })
         }
-      },
-      {
-        fileList: config.pathList.map(p => path.join(config.distFolder, p.fileName + '.html')),
-        replaceFn: (html) => { // 加入一些需要用到的变量
-          return html.replace(
-            /<html.*?>/, (a) => {
-              const miniclientVersion =  config.userConfig.versionBoundary || "2.1.0.3019"
-              let isHighVersion = `+(document.cookie.match(new RegExp('(^| )' + 'version' + '=([^;]+)')) || [,,''])[2].split('.').join('') >= +"${miniclientVersion}".split('.').join('')`
-              let currentFileName = html.match(/css\/((?:\w|-|_|.)*?)\.css/)[1] ;
-              let fileName = config.userConfig.onlineVersion ? `${isHighVersion}?"${currentFileName}":"${config.userConfig.onlineVersion}"`: `"${currentFileName}"`;
-              return `
-<script>
-  var ENV = {
-    FILE_NAME: ${fileName}
-  }
-</script>
-${a}`
-            }
-          )
-        }
       }
-      // 替换掉js里面的测试环境和开发环境的请求地址
-      // {
-      //   fileList: config.pathList.map(p => path.join(config.distFolder, 'js', p.fileName + '.bundle.js')),
-      //   replaceFn: (html) => {
-      //     return html.replace('qalive.gtarcade.com', 'live.gtarcade.com').replace('devlive.gtarcade.com', 'live.gtarcade.com')
-      //   }
-      // }
     ]),
     new MoveFolder([{ // 移动语言文件夹
       from: path.join(config.srcFolder, 'json'),

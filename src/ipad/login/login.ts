@@ -1,3 +1,4 @@
+import '@src/assets/scss/font.scss'
 import '@src/assets/scss/base.scss'
 import './login.scss'
 import Vue from 'vue'

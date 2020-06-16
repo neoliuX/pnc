@@ -41,6 +41,11 @@
     :defalutOption="option"
     v-model="option"></v-select>
 
+    <p class="text">下拉框： </p>
+    <Radio 
+    :radios="radios"
+    :radio="radio"
+    v-model="radio"></Radio>
   </div>
 </template>
 
@@ -52,13 +57,15 @@ import VInput from '../VInput.vue'
 import SearchInput from '../SearchInput.vue'
 import DateInput from '../DateInput.vue'
 import VSelect from '../VSelect.vue'
+import Radio from '../Radio.vue'
 @Component({
   components: {
     VButton,
     VInput,
     SearchInput,
     DateInput,
-    VSelect
+    VSelect,
+    Radio
   }
 })
 export default class FormDemo extends Vue {
@@ -82,6 +89,19 @@ export default class FormDemo extends Vue {
   ]
 
   option: any = this.options[0]
+
+  radios: any = [
+    {
+      name: '男',
+      value: '0'
+    },
+    {
+      name: '女',
+      value: '1'
+    }
+  ]
+
+  radio: any = this.radios[0]
 }
 </script>
 

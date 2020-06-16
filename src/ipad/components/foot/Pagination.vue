@@ -88,6 +88,7 @@ export default class Pagination extends Vue {
   align-items: center;
   justify-content: center;
   flex-flow: nowrap;
+  margin: 50px 0;
   li{
     height: 18px;
     line-height: 18px;

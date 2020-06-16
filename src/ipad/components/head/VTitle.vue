@@ -20,7 +20,7 @@ export default class VTitle extends Vue {
   width: 100%;
   font-size: 20px;
   color: #fff;
-  background: url('./images/titleBg.svg') no-repeat;
+  background: url('../../images/titleBg.svg') no-repeat;
   background-size: cover;
   text-align: center;
 }

@@ -28,13 +28,12 @@ module.exports = function ({
   const { outFileName, theme, type, currentDate, floderStr, isUserCssModules, isOnlyJs } = userConfig
   const cssLoader = isUserCssModules ? 'css-loader?modules&localIdentName=[local]_[hash:base64:5]' : 'css-loader'
   const isOnline = nodeEnv === 'online'
-  const staticPath = isOnline ? `////s.waliwang.com/test/pnc/${outFolder}/` : isProd ? path.join('/', outFolder.replace(outFolderTop, ''), '/') : '../'
-  // const staticPath = '../'
-
+  // const staticPath = isOnline ? `////s.waliwang.com/test/pnc/${outFolder}/` : isProd ? outFolder : '../'
+  const staticPath = isOnline ? `/test/pnc/${outFolder}/` : isProd ? `/test/pnc/${outFolder}/` : '../'
   const postcssPlugin = function () {
     const plugins = [autoprefixer]
     if (theme) {
-      plugins.push(postcssTheme({ outputPath: path.join(process.cwd(), 'dist', outFolder, 'css', floderStr, outFileName), isProd, theme }))
+      plugins.push(postcssTheme({ outputPath: path.join(process.cwd(), 'dist', outFolder, 'css', outFileName), isProd, theme }))
     }
     return plugins
   }
@@ -46,8 +45,8 @@ module.exports = function ({
     output: {
       path: path.join(process.cwd(), 'dist', outFolder),
       publicPath: ``,
-      filename: `./js/${floderStr}${outFileName}.bundle.js`,
-      chunkFilename: `./js/${floderStr}${outFileName}.[id].[chunkhash:8].min.js`
+      filename: `./js/${outFileName}.bundle.js`,
+      chunkFilename: `./js/${outFileName}.[id].[chunkhash:8].min.js`
     },
     resolve: {
       extensions: ['.ts', '.js', '.tsx', '.html'],
@@ -164,7 +163,7 @@ module.exports = function ({
       })),
       new ExtractTextPlugin({
         filename: (getPath) => {
-          return getPath(`./css/${floderStr}${outFileName}.css`).replace('css/js', 'css');
+          return getPath(`./css/${outFileName}.css`).replace('css/js', 'css');
         },
         allChunks: true
       })

@@ -1,7 +1,7 @@
 <template>
   <div class="v-select" :style="{width: getWidth}">
     <div class="title">{{option.name}}</div>
-    <img class="icon" :src="getIcon === 1 ? require('./images/arror.svg') : require('./images/arrorBlack.svg')">
+    <img class="icon" :src="getIcon === 1 ? require('../../images/arror.svg') : require('../../images/arrorBlack.svg')">
     <select v-model="option">
       <option 
       v-for="info in options" 

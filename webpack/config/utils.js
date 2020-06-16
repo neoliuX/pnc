@@ -37,7 +37,6 @@ function getUserConfig (configList, isProd, folder, pageList) {
 function getConfig (env) {
 	const nodeEnv = process.env.NODE_ENV
   const isProd = nodeEnv === 'pro' || nodeEnv === 'online' || nodeEnv === 'release'
-
   const [,folder, pageList] = env.path.match(/^(.*)\/((?:\w|_|-|,)*)$/)
   const folderTop = folder.split('/')[0]
   const userConfig = getUserConfig((env.config ? env.config.split("|") : []), isProd, folder, pageList)

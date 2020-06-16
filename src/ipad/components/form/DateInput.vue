@@ -7,7 +7,7 @@
     class="date">
       <span>{{value}}</span>
       <template slot="icon">
-        <img src="./images/date.svg" class="icon">
+        <img src="../../images/date.svg" class="icon">
       </template>
     </VInput> 
 </template>

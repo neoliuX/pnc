@@ -5,10 +5,11 @@
     :is-hide-mark="hideMark"></header-com>
     <!-- 主要内容 -->
     <div class="main">
+      签到
       <router-view></router-view>
     </div>
     <!-- 主要内容  end -->
-
+    <footer-com now-page="search"></footer-com>
   </div>
 </template>
 
@@ -16,9 +17,12 @@
 import { Component, Vue, Prop, Watch } from 'vue-property-decorator'
 import HeaderCom from '@src/ipad/components/head/Header.vue'
 
+import FooterCom from '@src/ipad/components/foot/Footer.vue'
+
 @Component({
   components: {
-    HeaderCom
+    HeaderCom,
+    FooterCom
   }
 })
 export default class BaseCom extends Vue {

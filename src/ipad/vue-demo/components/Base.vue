@@ -40,6 +40,10 @@ export default class BaseCom extends Vue {
     {
       'name': '底部模块',
       'path': 'foot'
+    },
+    {
+      'name': '表格',
+      'path': 'table'
     }
   ]
 }

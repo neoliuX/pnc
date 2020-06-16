@@ -4,14 +4,17 @@
     <ul class="info">
       <li class="user">
         <img src="../images/user.svg" class="icon">
-        <input type="text" v-model="user" placeholder="用户名">
+        <input type="text" v-model="userName" placeholder="用户名">
       </li>
       <li class="password">
         <img src="../images/password.svg" class="icon">
         <input type="password" v-model="password" placeholder="密码">
       </li>
     </ul>
-    <v-button class="btn" @click="submit">登 录</v-button>
+
+    <div class="btn-box">
+      <v-button class="btn" @click="submit">登 录</v-button>
+    </div>
 
     <alert v-model="isAlertShow">
       用户名或密码错误！
@@ -35,22 +38,41 @@ import { ReqApi } from '../lib/reqApi'
   }
 })
 export default class IndexCom extends Vue {
-  user: string = ''
+  userName: string = ''
   password: string = ''
   isAlertShow: boolean = false
+  errorMsg: any
 
   async submit () {
-    // let formData = new FormData()
-    // formData.append('userName', this.user.toString())
-    // formData.append('password', this.password.toString())
-    // formData.append('tenantId', 'porsche')
-    const { data } = await this.$ajax.post('/api/v2/iam/password/_login', {
-      userName: this.user,
+    this.errorMsg = this.checkValue()
+    if(this.errorMsg) {
+      this.isAlertShow = true
+      return
+    }
+    const { data: { code, data } } = await this.$ajax.post('/api/v2/iam/password/_login', {
+      userName: this.userName,
       password: this.password,
-      tenantId: 'tenantId'
+      tenantId: 'porsche'
     })
-    this.isAlertShow = true
+    if(code === 0) {
+      window.location.href = '/search-user.html#/searchPhone'
+    } else {
+      this.isAlertShow = true
+    }
   }
+
+  /**
+   *
+   * 验证状态
+   */
+  checkValue (key?: string | undefined) {
+    const regs = {
+      userName: [this.userName, [this.$v.isUnBlank], '账号不能为空'],
+      password: [this.password, [this.$v.isUnBlank, this.$v.minLength(6)], '密码不能小于6位']
+    }
+    return this.$v.check(key, regs, this)
+  }
+
   close () {
     this.isAlertShow = false
   }
@@ -104,7 +126,6 @@ export default class IndexCom extends Vue {
   }
   .btn{
     margin:0 auto;
-    display: block;
   }
 </style>
 

@@ -1,3 +1,4 @@
+import '@src/assets/scss/font.scss'
 import '@src/assets/scss/base.scss'
 import './search-user.scss'
 import Vue from 'vue'
@@ -6,8 +7,6 @@ import VueRouter from 'vue-router'
 import { RouteConfig } from 'vue-router/types'
 
 import BaseCom from './components/Base.vue'
-import SearchPhone from './pages/SearchPhone.vue'
-import SearchResult from './pages/SearchResult.vue'
 
 import vueAjax from '@common/vue-plugin/ajax/Ajax'
 import Validator from '@common/vue-plugin/validator/Validator'
@@ -26,16 +25,8 @@ Promise.resolve().then(res => {
   let routes: RouteConfig[] = [
     {
       path: '/',
-      component: BaseCom,
-      redirect: '/searchPhone',
-      children: [
-        {
-          path: '/searchPhone', component: SearchPhone
-        },
-        {
-          path: '/searchResult', component: SearchResult
-        }
-      ]
+      component: BaseCom
+      // redirect: '/searchPhone'
     }
   ]
   return routes

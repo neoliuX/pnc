@@ -4,6 +4,7 @@
     :is-hide-logo="hideLogo"
     :is-hide-mark="hideMark"></header-com>
     <!-- 主要内容 -->
+    创建
     <div class="main">
       <router-view></router-view>
     </div>

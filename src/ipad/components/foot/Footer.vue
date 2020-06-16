@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
       <ul class="tabs">
-        <li v-for="info in footData">
+        <li v-for="info in footData" :class="info.icon === nowPage ? 'active' : ''">
           <router-link 
           :to="info.path"
           :class="info.icon">{{info.name}}</router-link>
@@ -16,6 +16,7 @@ import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 
 @Component
 export default class Tabs extends Vue {
+  @Prop() nowPage?: string
   footData: any = [
     {
       name: '搜索手机',
@@ -81,7 +82,7 @@ export default class Tabs extends Vue {
         background-image: url('../../images/sign.svg');
       }
     }
-    .router-link-active{
+    &.active a{
       color:#D5001C;
       &.search::before{
         background-image: url('../../images/sreach_active.svg');
