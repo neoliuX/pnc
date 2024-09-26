@@ -137,7 +137,7 @@
     "promise-polyfill": "^8.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "rollup": "0.68.2",
+    "rollup": "2.79.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-istanbul": "^1.1.0",
     "rollup-watch": "^4.0.0",
